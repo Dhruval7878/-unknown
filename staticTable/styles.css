@@ -1,0 +1,25 @@
+nav>span>button {
+  background-color: rgb(19, 163, 247);
+  color: white;
+  border: none;
+}
+
+th,
+td,
+tr {
+  border: 1px;
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  border-collapse: separate;
+}
+
+button {
+  border: 0.5;
+}
+
+.alternate-rows tr:nth-child(2n) {
+  background: grey;
+}

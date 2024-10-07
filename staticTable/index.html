@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="flex justify-between items-center bg-blue-500 p-4 text-white rounded shadow">
+        <span class="text-xl font-bold">Student Master</span>
+        <div>
+            <button id="evenButton" class="bg-blue-400 hover:bg-blue-300 rounded px-3 py-1 mx-1">Even</button>
+            <button id="countButton" class="bg-blue-400 hover:bg-blue-300 rounded px-3 py-1 mx-1">Count</button>
+            <button id="addButton" class="bg-blue-400 hover:bg-blue-300 rounded px-3 py-1 mx-1">Add</button>
+            <button id="editButton" class="bg-blue-400 hover:bg-blue-300 rounded px-3 py-1 mx-1">Edit</button>
+            <button id="deleteButton" onclick='deleteFunc()'
+                class="bg-red-600 hover:bg-red-500 rounded px-3 py-1 mx-1">Delete</button>
+        </div>
+    </nav>
+    <div id="containerForCount" hidden></div>
+    <div class="container mx-auto mt-5">
+        <table class="min-w-full bg-white border border-gray-300 shadow-lg">
+            <thead>
+                <tr class="bg-blue-100 text-gray-600">
+                    <th class="py-2 px-4 border-b"><input type="checkbox" name="all" id="all"></th>
+                    <th class="py-2 px-4 border-b">Student Name</th>
+                    <th class="py-2 px-4 border-b">Roll No.</th>
+                    <th class="py-2 px-4 border-b">Class</th>
+                    <th class="py-2 px-4 border-b">Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody" class="text-center">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-5 mx-auto w-1/2">
+        <textarea name="inputTextArea" id="inputTextArea" placeholder="Type something..." maxlength="20"
+            class="w-full p-2 border rounded shadow"></textarea>
+        <span id="textarSpan" hidden></span>
+    </div>
+
+    <div class="mt-5 mx-auto w-1/2">
+        <div class="flex items-center">
+            <select name="selectTask" id="selectTask" class="border rounded shadow p-2 w-3/4" hidden>
+            </select>
+            <input type="text" name="optionsForSelect" id="optionsForSelect"
+                class="border rounded shadow p-2 w-1/4 mx-2" placeholder="Add Option">
+            <button id="selectOptionAdd" class="bg-blue-500 hover:bg-blue-400 text-white rounded px-3 py-1">Add
+                Option</button>
+        </div>
+    </div>
+
+    <div id="forDisplay" class="mt-5"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
